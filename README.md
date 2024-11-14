@@ -5,3 +5,38 @@ ACT stands for Aberrations, Contribution of short fragments, and Terminal motif 
 
 To benchmark performance, we evaluated four classifiers: Random Forest, Logistic Regression, Gaussian Naive Bayes, and Support Vector Machines (SVMs). Each classifier underwent hyperparameter optimization using a 4-fold cross-validation strategy aimed at maximizing predictive accuracy. To ensure the model’s robustness, training data was perturbed using five distinct random seeds, with hyperparameter optimization repeated for each iteration. This process generated five optimal models per classifier. For the validation cohort, the final classification prediction was determined by averaging the ACT scores produced by these five predictive models.
 
+## System Requirements
+
+- **Operating Systems**: Windows, macOS, Linux
+- **Dependencies**: Conda (latest version)
+- **Tested Versions**: Python 3.12
+- **Non-Standard Hardware**: None
+
+## Hardware Requirements
+The ACT-ML pipeline can be run on standard computers
+
+## Installation Guide
+
+### Prerequisites
+Prior to downloading ACT-ML pipeline, users should install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html).
+
+### Steps
+
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/mouliere-lab/ACT-ML.git
+    cd ACT-ML
+    ```
+2. **Create the Conda environment**:
+    ```sh
+    conda env create -f ACT-ML.yml
+    ```
+
+3. **Activate the environment**:
+    ```sh
+    conda activate ACT-ML
+    ```
+4. **Verify the installation**:
+    ```sh
+    python --version
+    ```
