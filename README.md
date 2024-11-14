@@ -13,6 +13,9 @@ To benchmark performance, we evaluated four classifiers: Random Forest, Logistic
 - **Non-Standard Hardware**: None
 
 ## Hardware Requirements
+The ACT-ML pipeline is designed to run on HPC clusters, as some steps can be resource-heavy with real-world data sets.
+
+## Hardware Requirements
 The ACT-ML pipeline can be run on standard computers
 
 ## Installation Guide
