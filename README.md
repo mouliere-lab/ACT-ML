@@ -40,3 +40,57 @@ Prior to downloading ACT-ML pipeline, users should install [Miniconda](https://d
     ```sh
     python --version
     ```
+
+## Demo
+
+The demo script automates the execution of the ACT-ML pipeline, showcasing its functionality with a predefined set of classifiers and parameters. It performs Leave-One-Out Cross-Validation (LOOCV) using various classifiers and random states, calculates average results over different uns with varying random states, and aggregates predictions from multiple classifiers to evaluate ensemble performance. The demo uses a small simulated dataset consisting of randomly generated numbers.
+
+### Instructions to Run the Demo
+
+1. **Navigate to the analysis directory**:
+    ```sh
+    cd analysis
+    ```
+
+2. **Run the demo script**:
+    ```sh
+    ./demo.sh
+    ```
+
+### Expected Output
+
+The demo script executes the following steps:
+
+- Iterates over each classifier and random state combination.
+- Runs LOOCV for each combination, utilizing the specified features and input data.
+- Saves the results of each LOOCV iteration as a CSV file with predictions, a CSV file with calculated performance metrics, and a CSV file with feature importances.
+- Calculates average results across different runs with varying random states for each classifier, and outputs a CSV file with predictions, a CSV file with calculated performance metrics, and a CSV file with feature importances.
+- Aggregates predictions from multiple classifiers to compute ensemble performance metrics, and outputs a CSV file with predictions and a CSV file with calculated performance metrics.
+
+## Run Time
+The demo should complete within 7 hours on a standard desktop computer.
+The analysis with real data should complete within 4 days on a HPC clusters using 16 CPU cores.
+
+## Instructions for Use
+
+### Running the pipeline on your data
+
+1. **Prepare your data**: Ensure your data format matches the expected input format. The input data needs to be an excell file compromising the following columns: 'LP', 'timepoint', 'EOT_response', and feature columns.
+2. **Navigate to the analysis directory**:
+    ```sh
+    cd analysis
+    ```
+3. **Run the main scripts**:
+   - Performing Leave-One-Out Cross-Validation (LOOCV) for a given classifier and for a given random state
+    ```sh
+    python LOOCV.py --features features_used_for_the_analysis --classifier_name classifier_name --input_file_path path/to/your/data.xlsx -- path_to_save_results path/to/save/results --rs random_state --nr_jobs number_of_cores --cv number_of_cv_folds
+    ```
+
+   - Calculate the average of performance metrics and predictions over different runs with different random states for a given classifier
+    ```sh
+    python average_runs.py --classifier classifier_name --results-path path/to/directory/containing/results/ --rs number_of_runs_to_be_averaged
+    ```  
+   - Aggregate average predictions from multiple classifiers and compute ensemble performance metrics and predictions.
+    ```sh
+    python ensemble.py --classifiers classifier1 classifier2 classifier3 ... classifier n --classifiers-path path/to/directory/containing/classifiers/results/ --results-path path/to/save/results
+    ``` 
