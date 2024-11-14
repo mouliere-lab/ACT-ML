@@ -22,7 +22,7 @@ def train_classifier(train_set, features, target_train, classifier_info, classif
         optimized_classifier.fit(train_set[features], target_train)
         
         # Log the best parameters found by GridSearchCV
-        logging.info(f"Best parameters: {best_classifier.best_params_}")
+        logging.info(f"Best parameters: {optimized_classifier.best_params_}")
             
         return optimized_classifier
             
