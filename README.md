@@ -62,11 +62,10 @@ The demo script automates the execution of the ACT-ML pipeline, illustrating its
 The demo script executes the following steps:
 
 - Iterates over each classifier and random state combination.
-- Runs LOOCV for each combination, utilizing the specified features and input data.
-- Saves the results of each LOOCV iteration as a CSV file with predictions, a CSV file with calculated performance metrics, and a CSV file with feature importances.
-- Calculates average results across different runs with varying random states for each classifier, and outputs a CSV file with predictions, a CSV file with calculated performance metrics, and a CSV file with feature importances.
-- Aggregates predictions from multiple classifiers to compute ensemble performance metrics, and outputs a CSV file with predictions and a CSV file with calculated performance metrics.
-
+- Runs the training and validation for each combination, utilizing the specified features and input data.
+- Saves the results from each iteration in separate CSV files: one for predictions, one for performance metrics, and one for feature importances.
+- Computes the average results across multiple runs with different random states for each classifier, and outputs three CSV files: one for predictions, one for performance metrics, and one for feature importances.
+  
 ## Run Time
 The demo should complete within 7 hours on a standard desktop computer.
 The analysis with real data should complete within 4 days on a HPC clusters using 16 CPU cores.
