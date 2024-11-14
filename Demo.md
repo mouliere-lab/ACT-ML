@@ -2,7 +2,7 @@
 
 The demo script automates the execution of the ACT-ML pipeline, illustrating its functionality with a predefined selection of classifiers and parameters. It conducts training and validation using different classifiers and random states, computing average results over multiple runs. The demo leverages a small simulated dataset composed of randomly generated numbers.
 
-### Instructions to Run the Demo
+## Running the Demo
 
 1. **Navigate to the analysis directory**:
     ```sh
@@ -14,7 +14,7 @@ The demo script automates the execution of the ACT-ML pipeline, illustrating its
     ./demo.sh
     ```
 
-### Expected Output
+## Expected Output
 
 The demo script executes the following steps:
 
