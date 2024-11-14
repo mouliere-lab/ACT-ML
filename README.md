@@ -80,14 +80,9 @@ The demo script executes the following steps:
 3. **Run the main scripts**:
    - Performing Leave-One-Out Cross-Validation (LOOCV) for a given classifier and for a given random state
     ```sh
-    python LOOCV.py --features features_used_for_the_analysis --classifier_name classifier_name --input_file_path path/to/your/data.xlsx -- path_to_save_results path/to/save/results --rs random_state --nr_jobs number_of_cores --cv number_of_cv_folds
+    python Train_validate.py --features features_used_for_the_analysis --classifier_name classifier_name --input_file_path path/to/your/data.xlsx --path_to_save_results path/to/save/results --rs random_state --nr_jobs number_of_cores --cv number_of_cv_folds
     ```
-
    - Calculate the average of performance metrics and predictions over different runs with different random states for a given classifier
     ```sh
     python average_runs.py --classifier classifier_name --results-path path/to/directory/containing/results/ --rs number_of_runs_to_be_averaged
     ```  
-   - Aggregate average predictions from multiple classifiers and compute ensemble performance metrics and predictions.
-    ```sh
-    python ensemble.py --classifiers classifier1 classifier2 classifier3 ... classifier n --classifiers-path path/to/directory/containing/classifiers/results/ --results-path path/to/save/results
-    ``` 
