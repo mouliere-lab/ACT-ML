@@ -43,7 +43,7 @@ Prior to downloading ACT-ML pipeline, users should install [Miniconda](https://d
 
 ## Demo
 
-The demo script automates the execution of the ACT-ML pipeline, showcasing its functionality with a predefined set of classifiers and parameters. It performs Leave-One-Out Cross-Validation (LOOCV) using various classifiers and random states, calculates average results over different uns with varying random states, and aggregates predictions from multiple classifiers to evaluate ensemble performance. The demo uses a small simulated dataset consisting of randomly generated numbers.
+The demo script automates the execution of the ACT-ML pipeline, illustrating its functionality with a predefined selection of classifiers and parameters. It conducts training and validation using different classifiers and random states, computing average results over multiple runs. The demo leverages a small simulated dataset composed of randomly generated numbers.
 
 ### Instructions to Run the Demo
 
