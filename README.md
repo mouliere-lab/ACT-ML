@@ -68,7 +68,7 @@ The demo script executes the following steps:
   
 ## Run Time
 The demo should complete within 30 minutes on a standard computer.
-The analysis with real data should complete within 46 minutes on a standard computer, and within 4 minutes on a HPC clusters using 16 CPU cores.
+The analysis with real data should complete within 46 minutes on a standard computer, and within 4 minutes on a HPC cluster using 16 CPU cores.
 
 ## Instructions for Use
 
