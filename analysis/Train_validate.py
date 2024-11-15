@@ -8,7 +8,7 @@ import argparse
 import numpy as np
 
 # Silence warnings
-warnings.filterwarnings("ignore")
+warnings.filterwarnings('ignore')
 
 # Get the current directory of the script
 current_dir = os.path.dirname(os.path.realpath(__file__))
