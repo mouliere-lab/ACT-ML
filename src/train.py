@@ -8,7 +8,7 @@ import warnings
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Silence warnings during execution
-warnings.filterwarnings("ignore")
+warnings.filterwarnings('ignore')
 
 # This function trains a classifier and tunes its hyperparameters.
 def train_classifier(train_set, features, target_train, classifier_info, classifier_name, nr_jobs,cv):
