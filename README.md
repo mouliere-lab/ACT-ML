@@ -67,8 +67,8 @@ The demo script executes the following steps:
 - Computes the average results across multiple runs with different random states for each classifier, and outputs three CSV files: one for predictions, one for performance metrics, and one for feature importances.
   
 ## Run Time
-The demo should complete within x hours on a standard computer.
-The analysis with real data should complete within 1 hour on a standard computer, and within x minutes on a HPC clusters using 16 CPU cores.
+The demo should complete within 30 minutes on a standard computer.
+The analysis with real data should complete within 46 minutes on a standard computer, and within x minutes on a HPC clusters using 16 CPU cores.
 
 ## Instructions for Use
 
